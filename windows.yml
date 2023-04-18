@@ -1,0 +1,7 @@
+---
+- name: Install IIS
+  hosts: windows
+  gather_facts: true
+  tasks:
+   - name: Run remote PowerShell Script
+     win_command: powershell.exe -ExecutionPolicy ByPass -File C:\script.ps1
