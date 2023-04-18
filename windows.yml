@@ -3,5 +3,8 @@
   hosts: windows
   gather_facts: true
   tasks:
-   - name: Run remote PowerShell Script
-     win_command: powershell.exe -ExecutionPolicy ByPass -File C:\script.ps1
+   - name: Install Remote Desktop Connection Manager locally omitting the product_id
+     ansible.windows.win_package:
+       path: C:\temp\rdcman.msi
+       state: present
+
