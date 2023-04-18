@@ -5,6 +5,6 @@
   tasks:
    - name: Install Remote Desktop Connection Manager locally omitting the product_id
      ansible.windows.win_package:
-       path: C:\temp\rdcman.msi
+       path: C:\CRRedist2008_x86.msi
        state: present
 
